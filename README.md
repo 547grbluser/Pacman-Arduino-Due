@@ -3,6 +3,14 @@ Pacman Game for Arduino Due with tft ILI9341 and VGA output support
 
 Pacman Game on Arduino Due with ILI9341 and VGA support (available 2 outputs at the same time), playable with keypad, 5 sample levels, VGA output is 240x320, source code avaliable on Github, Licensed under MIT License.
 
+Arduino Forum:
+
+http://forum.arduino.cc/index.php?topic=375394.0
+
+Video:
+
+https://www.youtube.com/watch?v=2Hdzr6m4QdU
+
 <img src="preview/000.jpg" />
 
 <img src="preview/001.jpg" />
