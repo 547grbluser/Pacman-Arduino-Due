@@ -9,6 +9,7 @@ Pacman Game on Arduino Due with ILI9341 and VGA support (available 2 outputs at 
 
 <img src="preview/003.jpg" />
 
+<pre>
 /******************************************************************************/
 /*                                                                            */
 /*  PACMAN GAME FOR ARDUINO DUE                                               */
@@ -63,3 +64,4 @@ Pacman Game on Arduino Due with ILI9341 and VGA support (available 2 outputs at 
 /*  46 = button RIGHT                                                         */
 /*                                                                            */
 /******************************************************************************/
+</pre>
