@@ -84,11 +84,6 @@ byte PACMANFALLBACK = 0;
 /*   LIBRARIES INCLUDES                                                       */
 /******************************************************************************/
 
-//Library for SNESpad
-#include "SNESpad.h"
-// put your own strobe/clock/data pin numbers here
-SNESpad nintendo = SNESpad(3,4,5);
-
 // SPI Library
 #include <SPI.h>
 
@@ -139,18 +134,15 @@ void ClearKeys() {
 }
 
 void KeyPadLoop(){
-  byte SNESpadState = nintendo.buttons();
 
-  Serial.println(SNESpadState);
-
-  if (SNESpadState & 8 || digitalRead(51)==0) { ClearKeys();  but_START=true; delay(300); } //else but_START=false;
-  if (SNESpadState & 4 || digitalRead(53)==0) { ClearKeys();  but_SELECT=true; delay(300); }  else but_SELECT=false;
-  if (SNESpadState & 1 || digitalRead(44)==0) { ClearKeys();  but_A=true; }  else but_A=false;
-  if (SNESpadState & 2 || digitalRead(49)==0) { ClearKeys();  but_B=true; }  else but_B=false;
-  if (SNESpadState & 16 || digitalRead(52)==0) { ClearKeys();  but_UP=true; }  //else but_UP=false;
-  if (SNESpadState & 32 || digitalRead(50)==0) { ClearKeys();  but_DOWN=true; }  //else but_DOWN=false;
-  if (SNESpadState & 64 || digitalRead(48)==0) { ClearKeys();  but_LEFT=true; }  // else but_LEFT=false;
-  if (SNESpadState & 128 || digitalRead(46)==0) { ClearKeys();  but_RIGHT=true; }  //else but_RIGHT=false;
+  if (digitalRead(51)==0) { ClearKeys();  but_START=true; delay(300); } //else but_START=false;
+  if (digitalRead(53)==0) { ClearKeys();  but_SELECT=true; delay(300); }  else but_SELECT=false;
+  if (digitalRead(44)==0) { ClearKeys();  but_A=true; }  else but_A=false;
+  if (digitalRead(49)==0) { ClearKeys();  but_B=true; }  else but_B=false;
+  if (digitalRead(52)==0) { ClearKeys();  but_UP=true; }  //else but_UP=false;
+  if (digitalRead(50)==0) { ClearKeys();  but_DOWN=true; }  //else but_DOWN=false;
+  if (digitalRead(48)==0) { ClearKeys();  but_LEFT=true; }  // else but_LEFT=false;
+  if (digitalRead(46)==0) { ClearKeys();  but_RIGHT=true; }  //else but_RIGHT=false;
   
   yield();
 }
